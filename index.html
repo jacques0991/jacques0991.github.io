@@ -1,282 +1,273 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Ingénieur Mécatronique & Robotique</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Savin N'Guessan — Ingénieur Mécatronique & Robotique</title>
+  <meta name="description" content="Portfolio de Savin N'Guessan — ingénieur en mécatronique et robotique. Projets : pick-and-place autonome, véhicules logistiques autonomes, IA industrielle. CV téléchargeable.">
+  <meta name="keywords" content="robotique, mécatronique, vision par ordinateur, ROS, IA, pick and place, automation">
+  <link rel="canonical" href="https://yourdomain.com/" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Savin N'Guessan — Ingénieur Mécatronique & Robotique">
+  <meta property="og:description" content="Conception et intégration de systèmes robotiques intelligents : vision 3D, IA embarquée, automatisation industrielle.">
+  <meta property="og:image" content="https://images.pexels.com/photos/2568538/pexels-photo-2568538.jpeg">
+  <meta property="og:type" content="website">
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Savin N'Guessan",
+    "jobTitle": "Ingénieur Mécatronique & Robotique",
+    "url": "https://yourdomain.com/",
+    "sameAs": ["https://www.linkedin.com/in/savin-n-nguessan"],
+    "description": "Ingénieur spécialisé en mécatronique, robotique industrielle et IA appliquée. Expérience sur pick-and-place, véhicules autonomes et optimisation de procédés."
+  }
+  </script>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #0b1e33;
-      --secondary: #1e90ff;
-      --accent: #ff4757;
-      --light: #f4f7fa;
-      --dark: #1a1a1a;
-      --gray: #7f8c8d;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Montserrat", sans-serif;
-    }
-
-    body {
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.7;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      padding: 20px 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .logo span {
-      color: var(--secondary);
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 500;
-      color: var(--dark);
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--secondary);
-    }
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#0ea5e9;--glass:rgba(255,255,255,0.04);--white:#ffffff}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; margin:0; color:var(--white); background:linear-gradient(180deg,#071021 0%, #071426 60%);-webkit-font-smoothing:antialiased}
+    .container{width:92%;max-width:1200px;margin:0 auto;padding:40px 0}
+    header{position:sticky;top:0;backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(1,6,12,0.6),rgba(1,6,12,0.35));border-bottom:1px solid rgba(255,255,255,0.04);z-index:50}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:#001;box-shadow:0 6px 30px rgba(14,165,233,0.12)}
+    .brand{font-weight:700;font-size:1.05rem}
+    .nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+    .nav-links a:hover{color:var(--accent)}
 
     /* HERO */
-    .hero {
-      height: 95vh;
-      background: linear-gradient(135deg, rgba(10,20,40,0.95), rgba(20,40,80,0.9)), url('https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-      color: white;
-    }
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center;padding:80px 0}
+    .hero-left h1{font-size:2.4rem;margin:0 0 14px;color:var(--white);line-height:1.05}
+    .hero-left p{color:var(--muted);margin-bottom:18px}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#001;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
 
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
+    .hero-right{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .profile-photo{width:100%;height:380px;border-radius:10px;overflow:hidden}
+    .profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
 
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: auto;
-      opacity: 0.9;
-    }
+    /* Sections */
+    section.heading{padding:70px 0}
+    .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 
-    .hero-btns {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+    /* Projects grid */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+    .project{background:linear-gradient(180deg,#071426, #071021);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .project .thumb{height:190px;overflow:hidden}
+    .project img{width:100%;height:100%;object-fit:cover;display:block}
+    .project .meta{padding:16px}
+    .project h3{margin:0 0 8px;color:var(--white)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:8px;color:var(--muted);font-weight:600;font-size:0.82rem}
 
-    .btn {
-      padding: 12px 28px;
-      background: var(--secondary);
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+    /* Result visuals */
+    .visuals{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+    .vis-card{background:linear-gradient(180deg,#071426,#061427);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
 
-    .btn:hover {
-      background: #0a6ed1;
-    }
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:20px}
+    .contact-info{display:flex;flex-direction:column;gap:12px}
+    .muted{color:var(--muted)}
 
-    .btn-outline {
-      border: 2px solid white;
-      background: transparent;
-    }
+    footer{padding:30px 0;text-align:center;color:var(--muted);font-size:0.95rem}
 
-    /* ABOUT */
-    section {
-      padding: 100px 0;
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .about-container img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 2.4rem;
-      position: relative;
-    }
-
-    h2:after {
-      content: '';
-      width: 80px;
-      height: 4px;
-      background: var(--secondary);
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -10px;
-    }
-
-    /* PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .project-content {
-      padding: 20px;
-    }
-
-    .project-tags span {
-      display: inline-block;
-      padding: 5px 12px;
-      background: var(--light);
-      border-radius: 6px;
-      margin-right: 6px;
-      font-size: 0.8rem;
-      color: var(--primary);
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .contact-form, .contact-info {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      padding: 40px 0;
-      margin-top: 50px;
-      text-align: center;
-    }
+    /* Responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr}.visuals{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}}
 
   </style>
 </head>
-
 <body>
 
 <header>
-  <nav>
-    <div class="logo">Savin<span>Robotique</span></div>
-    <ul class="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#apropos">À Propos</a></li>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="mark">SR</div>
+        <div class="brand">Savin <span style="color:var(--accent)">Robotique</span></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">À Propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#results">Résultats</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section id="accueil" class="hero">
-  <div>
-    <h1>Ingénieur en Robotique & IA</h1>
-    <p>Conception, développement et intégration de systèmes robotiques intelligents.</p>
-    <div class="hero-btns">
-      <a href="#projets" class="btn">Voir mes projets</a>
-      <a href="#contact" class="btn btn-outline">Me contacter</a>
+<main class="container" style="padding-top:28px">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Ingénieur Mécatronique & Robotique — Systèmes Automatisés & IA</h1>
+      <p class="muted">Conception et intégration de solutions robotisées (pick-and-place autonome, véhicules logistiques, systèmes d'inspection). Expertise : perception 3D, IA embarquée, contrôle avancé.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">Voir mes projets</a>
+        <a class="btn secondary" href="/CV_Savin_NGuessan.pdf" target="_blank">Télécharger CV</a>
+      </div>
     </div>
-  </div>
-</section>
 
-<section id="apropos">
-  <h2>À propos de moi</h2>
-  <div class="about-container">
-    <img src="https://images.pexels.com/photos/2568538/pexels-photo-2568538.jpeg" alt="robotics engineer">
-    <div>
-      <p>Je suis un ingénieur spécialisé en mécatronique, robotique et intelligence artificielle. Passionné par les systèmes intelligents, j’intègre mécanique, électronique et algorithmes avancés pour créer des robots capables d'interagir efficacement avec leur environnement.</p>
+    <aside class="hero-right">
+      <div class="profile-photo">
+        <img loading="lazy" src="https://images.pexels.com/photos/2568538/pexels-photo-2568538.jpeg" alt="Savin N'Guessan — ingénieur robotique">
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:14px;">
+        <div class="card" style="flex:1;margin-right:10px;text-align:center">
+          <div style="font-size:1.1rem;font-weight:700">Expérience</div>
+          <div class="muted">8+ ans</div>
+        </div>
+        <div class="card" style="flex:1;text-align:center">
+          <div style="font-size:1.1rem;font-weight:700">Domaines</div>
+          <div class="muted">Vision 3D • IA • ROS</div>
+        </div>
+      </div>
+    </aside>
+  </section>
 
-      <h3>Compétences principales</h3>
-      <p>Robotique industrielle, Vision par ordinateur, Systèmes embarqués, ROS, Machine Learning.</p>
+  <!-- ABOUT -->
+  <section id="about" class="heading">
+    <h2>À propos</h2>
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start">
+      <div>
+        <p style="color:var(--muted)">Ingénieur de formation avec une double compétence en mécatronique et génie des procédés, je développe des systèmes robotiques embarqués et des pipelines de perception adaptés aux besoins industriels. Mes travaux portent sur l'intégration de capteurs RGB-D, l'estimation de pose 6DoF, la planification de trajectoire et la commande adaptative.</p>
+
+        <h3>Compétences clés</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px">
+          <span class="tag">ROS</span>
+          <span class="tag">Python / C++</span>
+          <span class="tag">Vision 3D (RealSense)</span>
+          <span class="tag">Deep Learning (PyTorch)</span>
+          <span class="tag">GraspNet / PointNet++</span>
+          <span class="tag">MoveIt / RRT*</span>
+          <span class="tag">ROS2 / Gazebo</span>
+        </div>
+
+        <h3 style="margin-top:18px">Résumé</h3>
+        <p class="muted">J'ai conçu et validé des cellules robotisées pour l’industrie, développé des algorithmes de détection et d'estimation de pose, et intégré des solutions IA pour améliorer la robustesse de la préhension d'objets inconnus. Mes projets sont orientés vers la mise en production et la reproductibilité scientifique.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4 style="margin:0 0 8px">Contact</h4>
+          <div class="muted">nguessansavin@hotmail.com</div>
+          <div class="muted">+225 07 08 50 67 64</div>
+          <div style="margin-top:12px"><a href="https://www.linkedin.com/in/savin-n-nguessan" target="_blank" style="color:var(--accent);text-decoration:none">LinkedIn</a></div>
+        </div>
+
+        <div style="height:20px"></div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px">Téléchargements</h4>
+          <a href="/PickPlace2.0_Presentation.pdf" target="_blank" style="color:var(--accent);text-decoration:none">Pitch Deck — PickPlace2.0 (PDF)</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="projets">
-  <h2>Projets Réalisés</h2>
-  <div class="projects-grid">
+  <!-- PROJECTS -->
+  <section id="projects" class="heading">
+    <h2>Projets Sélectionnés</h2>
+    <div class="projects-grid">
 
-    <div class="project-card">
-      <img src="https://images.pexels.com/photos/3913031/pexels-photo-3913031.jpeg">
-      <div class="project-content">
-        <h3>Manipulateur Pick & Place Intelligent</h
+      <article class="project">
+        <div class="thumb"><img loading="lazy" srcset="https://images.pexels.com/photos/3913031/pexels-photo-3913031.jpeg 1200w, https://images.pexels.com/photos/3913031/pexels-photo-3913031.jpeg 800w" alt="Cobot industriel"></div>
+        <div class="meta">
+          <h3>Pick & Place 2.0 — Tri autonome</h3>
+          <p class="muted">Conception d'une cellule robotique utilisant RealSense, PointNet++, GraspNet et MoveIt pour la détection 3D, estimation de pose et préhension d'objets inconnus en bac.</p>
+          <div class="tags"><span class="tag">ROS</span><span class="tag">RealSense</span><span class="tag">GraspNet</span><span class="tag">PyTorch</span></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="thumb"><img loading="lazy" src="https://images.pexels.com/photos/2568538/pexels-photo-2568538.jpeg" alt="Vehicule autonome"></div>
+        <div class="meta">
+          <h3>Véhicule Autonome de Logistique</h3>
+          <p class="muted">Navigation et planification pour véhicules logistiques, SLAM multi-sensor fusion, contrôle bas niveau pour environnement d'entrepôt.</p>
+          <div class="tags"><span class="tag">SLAM</span><span class="tag">C++</span><span class="tag">Systèmes Embarqués</span></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="thumb"><img loading="lazy" src="https://images.pexels.com/photos/3912976/pexels-photo-3912976.jpeg" alt="IA industrielle"></div>
+        <div class="meta">
+          <h3>Optimisation de Processus par IA</h3>
+          <p class="muted">Système de contrôle prédictif et monitoring temps réel pour réduire les défauts de production et optimiser consommation énergétique.</p>
+          <div class="tags"><span class="tag">ML Ops</span><span class="tag">Python</span><span class="tag">IoT</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- RESULTS VISUALS -->
+  <section id="results" class="heading">
+    <h2>Résultats Visuels</h2>
+    <div class="visuals">
+      <div class="vis-card">
+        <h4>Nuage de points annoté (exemple)</h4>
+        <img loading="lazy" src="https://images.pexels.com/photos/414519/pexels-photo-414519.jpeg" alt="nuage de points" style="width:100%;border-radius:8px;margin-top:12px">
+        <p class="muted" style="margin-top:10px">Exemple synthétique : segmentation d'objets et extraction de clusters pour estimation de pose.</p>
+      </div>
+
+      <div class="vis-card">
+        <h4>Performance de préhension</h4>
+        <img loading="lazy" src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="graphiques" style="width:100%;border-radius:8px;margin-top:12px">
+        <p class="muted" style="margin-top:10px">Taux de succès : Sans IA 72% — GraspNet 91% — GraspNet + Visual Servoing 94% (résultats expérimentaux simulés).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="heading">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="card">
+          <h4>Contact direct</h4>
+          <div class="muted">Email: <a href="mailto:nguessansavin@hotmail.com" style="color:var(--accent)">nguessansavin@hotmail.com</a></div>
+          <div class="muted">Téléphone: +225 07 08 50 67 64</div>
+          <div class="muted">Localisation: Abidjan, Côte d'Ivoire</div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4>Réseaux</h4>
+          <a href="https://www.linkedin.com/in/savin-n-nguessan" target="_blank" style="color:var(--accent)">LinkedIn</a>
+        </div>
+      </div>
+
+      <form class="card" onsubmit="event.preventDefault();alert('Merci — message envoyé !');this.reset();">
+        <h4>Envoyer un message</h4>
+        <label class="muted">Nom</label>
+        <input name="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);margin-top:8px">
+        <label class="muted" style="margin-top:12px;display:block">Email</label>
+        <input name="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);margin-top:8px">
+        <label class="muted" style="margin-top:12px;display:block">Message</label>
+        <textarea name="message" rows="6" required style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);margin-top:8px"></textarea>
+        <div style="margin-top:12px"><button class="btn" type="submit">Envoyer</button></div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="muted">© 2025 Savin N'Guessan — Ingénieur Mécatronique & Robotique • Tous droits réservés</div>
+  </footer>
+
+</main>
+
+<!-- Minimal JS for nav scroll -->
+<script>
+  document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.getAttribute('href').slice(1);document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});}))
+</script>
+</body>
+</html>
