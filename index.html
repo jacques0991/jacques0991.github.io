@@ -381,6 +381,42 @@
             left: -10px;
         }
         
+        /* Certifications Section */
+        .certifications {
+            background: var(--light);
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .certification-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .certification-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .certification-content {
+            padding: 20px;
+        }
+        
         /* Contact Section */
         .contact {
             background: var(--light);
@@ -598,7 +634,7 @@
                 align-items: center;
             }
             
-            .projects-grid {
+            .projects-grid, .certifications-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -616,6 +652,7 @@
                     <li><a href="#apropos">À Propos</a></li>
                     <li><a href="#projets">Projets</a></li>
                     <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -693,36 +730,34 @@
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1565689228864-2b5c2b5b9c9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                        <h3>Système Autonome</h3>
+                    <div class="project-img" style="background-image: url('images_7.jpg');">
+                        <h3>Cellule Robotisée</h3>
                     </div>
                     <div class="project-content">
-                        <h3>Véhicule Autonome de Logistique</h3>
-                        <p>Développement d'un système de navigation autonome pour véhicules logistiques en environnement d'entrepôt avec détection d'obstacles en temps réel. Implémentation d'algorithmes SLAM et de planification de trajectoire optimisée pour une efficacité maximale.</p>
+                        <h3>Cellule de Travail Robotisée avec Programmation Hors Ligne</h3>
+                        <p>Mise en place d'une cellule de travail robotisée complète avec système de programmation hors ligne. Conception de l'environnement de travail, intégration des systèmes de mesure et développement des séquences d'assemblage automatisées.</p>
                         <div class="project-tags">
-                            <span class="project-tag">SLAM</span>
-                            <span class="project-tag">Deep Learning</span>
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">Systèmes Embarqués</span>
-                            <span class="project-tag">Navigation Autonome</span>
+                            <span class="project-tag">Robotique Industrielle</span>
+                            <span class="project-tag">Programmation Hors Ligne</span>
+                            <span class="project-tag">Automatisation</span>
+                            <span class="project-tag">Systèmes de Mesure</span>
                         </div>
                         <a href="#" class="btn">Voir les détails</a>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                        <h3>IA Industrielle</h3>
+                    <div class="project-img" style="background-image: url('images_3.jpg');">
+                        <h3>Maintenance Industrielle</h3>
                     </div>
                     <div class="project-content">
-                        <h3>Optimisation de Processus par IA</h3>
-                        <p>Implémentation d'un système de contrôle prédictif utilisant le machine learning pour optimiser les paramètres de production et réduire les défauts de fabrication. Le système analyse en temps réel les données de production et ajuste automatiquement les paramètres pour une qualité optimale.</p>
+                        <h3>Système de Maintenance Industrielle Avancée</h3>
+                        <p>Développement et mise en œuvre de protocoles de maintenance industrielle préventive et prédictive. Intégration de capteurs IoT pour la surveillance en temps réel des équipements et optimisation des cycles de maintenance.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Machine Learning</span>
-                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Maintenance Industrielle</span>
                             <span class="project-tag">IoT</span>
-                            <span class="project-tag">Analytique Temps Réel</span>
-                            <span class="project-tag">Contrôle Prédictif</span>
+                            <span class="project-tag">Analyse Prédictive</span>
+                            <span class="project-tag">GMAO</span>
                         </div>
                         <a href="#" class="btn">Voir les détails</a>
                     </div>
@@ -769,6 +804,41 @@
                         <h3>Baccalauréat Scientifique Série D</h3>
                         <h4>Lycée Municipal 2 de Koumassi</h4>
                         <p>Formation scientifique complète avec spécialisation en sciences de la vie et de la terre, physique-chimie et mathématiques. Obtention du diplôme avec mention, démontrant un fort intérêt et des aptitudes pour les sciences et technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications & Formations</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-img" style="background-image: url('images_10.jpg');">
+                    </div>
+                    <div class="certification-content">
+                        <h3>MOOC Robotique Avancée</h3>
+                        <p>Certification en robotique avancée couvrant la programmation de robots industriels, la vision par ordinateur et l'intégration de systèmes automatisés. Formation complète sur les dernières technologies en robotique collaborative.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-img" style="background-image: url('images_1.jpg');">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Formation Publique en Automatisme Industriel</h3>
+                        <p>Certification en automatismes industriels et contrôle de processus. Formation couvrant la programmation de PLC, les systèmes SCADA et l'intégration de capteurs dans les environnements industriels.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-img" style="background-image: url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    </div>
+                    <div class="certification-content">
+                        <h3>Intelligence Artificielle Industrielle</h3>
+                        <p>Certification spécialisée en applications de l'IA dans l'industrie. Formation sur le machine learning, la vision par ordinateur et l'optimisation des processus industriels grâce aux algorithmes intelligents.</p>
                     </div>
                 </div>
             </div>
@@ -873,6 +943,7 @@
                         <li><a href="#apropos">À Propos</a></li>
                         <li><a href="#projets">Projets</a></li>
                         <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -936,7 +1007,7 @@
             }
             
             // Animation des éléments au scroll
-            const elements = document.querySelectorAll('.project-card, .timeline-content');
+            const elements = document.querySelectorAll('.project-card, .timeline-content, .certification-card');
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
@@ -949,7 +1020,7 @@
         });
         
         // Initialisation des animations
-        document.querySelectorAll('.project-card, .timeline-content').forEach(element => {
+        document.querySelectorAll('.project-card, .timeline-content, .certification-card').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(20px)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
