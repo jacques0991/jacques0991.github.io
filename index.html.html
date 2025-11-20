@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Déploiement Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .option-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .option-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            border-left: 5px solid var(--secondary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .option-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .option-card.premium {
+            border-left-color: var(--accent);
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 10px 0;
+        }
+        
+        .price.premium {
+            color: var(--accent);
+        }
+        
+        .features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .btn-premium {
+            background: var(--accent);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .step-number {
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .option-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Déployer Votre Portfolio</h1>
+            <p class="subtitle">Guide complet pour mettre votre portfolio en ligne</p>
+        </header>
+        
+        <div class="content">
+            <h2>Choisissez Votre Solution d'Hébergement</h2>
+            
+            <div class="option-grid">
+                <!-- Option GitHub Pages -->
+                <div class="option-card">
+                    <h3>🐙 GitHub Pages</h3>
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li>Hébergement gratuit</li>
+                        <li>Intégration Git</li>
+                        <li>SSL automatique</li>
+                        <li>Personnalisation de domaine</li>
+                        <li>Parfait pour les débutants</li>
+                    </ul>
+                    <a href="#github-pages" class="btn">Choisir cette option</a>
+                </div>
+                
+                <!-- Option Netlify -->
+                <div class="option-card">
+                    <h3>⚡ Netlify</h3>
+                    <div class="price">Gratuit</div>
+                    <ul class="features">
+                        <li>Déploiement continu</li>
+                        <li>Formulaires gratuit</li>
+                        <li>CDN global</li>
+                        <li>SSL automatique</li>
+                        <li>Intégration Git</li>
+                    </ul>
+                    <a href="#netlify" class="btn">Choisir cette option</a>
+                </div>
+                
+                <!-- Option Hébergement Payant -->
+                <div class="option-card premium">
+                    <h3>💼 Hébergement Pro</h3>
+                    <div class="price premium">~5-20€/mois</div>
+                    <ul class="features">
+                        <li>Support technique</li>
+                        <li>Bases de données</li>
+                        <li>E-mails professionnels</li>
+                        <li>Backups automatiques</li>
+                        <li>Meilleures performances</li>
+                    </ul>
+                    <a href="#hebergement-pro" class="btn btn-premium">Choisir cette option</a>
+                </div>
+            </div>
+            
+            <!-- Guide GitHub Pages -->
+            <div id="github-pages" class="steps">
+                <h2>📝 Guide GitHub Pages - Étape par Étape</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Créer un compte GitHub</h3>
+                        <p>Rendez-vous sur <a href="https://github.com" target="_blank">github.com</a> et créez un compte gratuit</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Créer un nouveau dépôt</h3>
+                        <p>Nommez-le <strong>votrenom.github.io</strong> (remplacez "votrenom" par votre pseudo GitHub)</p>
+                        <div class="code-block">
+                            Nom du dépôt: votrenom.github.io<br>
+                            Visibilité: Public<br>
+                            Initialiser avec un README: ✅
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Téléverser vos fichiers</h3>
+                        <p>Ajoutez votre fichier HTML (renommez-le <strong>index.html</strong>) et vos assets dans le dépôt</p>
+                        <div class="code-block">
+                            📁 votrenom.github.io/<br>
+                            └── 📄 index.html<br>
+                            └── 📁 css/<br>
+                            └── 📁 js/<br>
+                            └── 📁 images/
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>Activer GitHub Pages</h3>
+                        <p>Allez dans Settings → Pages → Source → select "main branch" → Save</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h3>Votre site est en ligne !</h3>
+                        <p>Accédez à <strong>https://votrenom.github.io</strong></p>
+                        <p>⏱️ Le site peut prendre 1-10 minutes pour être disponible</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guide Netlify -->
+            <div id="netlify" class="steps">
+                <h2>⚡ Guide Netlify - Déploiement Rapide</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Préparer vos fichiers</h3>
+                        <p>Assurez-vous que votre fichier principal s'appelle <strong>index.html</strong></p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Aller sur Netlify</h3>
+                        <p>Rendez-vous sur <a href="https://netlify.com" target="_blank">netlify.com</a> et créez un compte</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Déployer par drag & drop</h3>
+                        <p>Glissez-déposez votre dossier contenant index.html dans la zone de déploiement</p>
+                        <div class="code-block">
+                            Méthode: Drag & Drop<br>
+                            Dossier: Votre dossier de portfolio<br>
+                            Résultat: Site déployé automatiquement !
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>Personnaliser l'URL</h3>
+                        <p>Dans Site settings, vous pouvez changer le nom de votre site Netlify</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hébergement Pro -->
+            <div id="hebergement-pro" class="steps">
+                <h2>💼 Hébergement Professionnel</h2>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Choisir un hébergeur</h3>
+                        <p>Options recommandées :</p>
+                        <ul class="features">
+                            <li><strong>SiteGround</strong> - Excellent support</li>
+                            <li><strong>OVH</strong> - Leader français</li>
+                            <li><strong>o2switch</strong> - Performances</li>
+                            <li><strong>Hostinger</strong> - Économique</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Acheter un nom de domaine</h3>
+                        <p>Choisissez un nom professionnel :</p>
+                        <div class="code-block">
+                            ✅ prenom-nom.com<br>
+                            ✅ nom-ingénieur.com<br>
+                            ✅ specialite-technologie.fr<br>
+                            ❌ pseudo-jeu-video.com
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Téléverser vos fichiers</h3>
+                        <p>Utilisez FileZilla ou le gestionnaire de fichiers de l'hébergeur</p>
+                        <div class="code-block">
+                            Hôte: ftp.votredomaine.com<br>
+                            Identifiant: Votre identifiant<br>
+                            Mot de passe: Votre mot de passe<br>
+                            Dossier: public_html/ ou www/
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Checklist de pré-déploiement -->
+            <div class="steps">
+                <h2>✅ Checklist avant Déploiement</h2>
+                
+                <div class="step">
+                    <div class="step-number">!</div>
+                    <div>
+                        <h3>Vérifications importantes</h3>
+                        <ul class="features">
+                            <li>✅ Toutes les informations de contact sont correctes</li>
+                            <li>✅ Le site est responsive (test mobile)</li>
+                            <li>✅ Les liens fonctionnent</li>
+                            <li>✅ Les images sont optimisées</li>
+                            <li>✅ Le formulaire de contact est testé</li>
+                            <li>✅ Orthographe et grammaire vérifiés</li>
+                            <li>✅ Temps de chargement acceptable</li>
+                            <li>✅ Meta descriptions complétées</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🚀 Votre portfolio en ligne en moins de 30 minutes !</p>
+            <p>Besoin d'aide ? Consultez la documentation officielle des plateformes.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation des cartes au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Appliquer l'animation aux cartes
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
