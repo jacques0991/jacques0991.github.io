@@ -3,379 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVIN N'GUESSAN | Ingénieur Mécatronique et Robotique | Automaticien Industriel et IA</title>
-    <meta name="description" content="Ingénieur en mécatronique et robotique spécialisé dans les systèmes automatisés et l'intelligence artificielle. Conception de solutions innovantes pour l'industrie 4.0.">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Savin N'Guessan | Ingenieur mecatronique, robotique et automatisation</title>
+    <meta name="description" content="Portfolio professionnel de Savin N'Guessan, ingenieur en mecatronique, robotique, automatisation industrielle et IA appliquee.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Savin<span>N'GUESSAN</span></div>
-                <div class="menu-toggle">☰</div>
-                <ul class="nav-links">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À Propos</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#experience">Expérience</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+<body data-page="index.html">
+    <header class="site-header" data-header>
+        <div class="shell header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SN</span>
+                <span class="brand-text">Savin <strong>N'Guessan</strong></span>
+            </a>
+            <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Ouvrir le menu</span>
+            </button>
+            <nav class="site-nav" id="site-nav" data-nav>
+                <a href="index.html">Accueil</a>
+                <a href="about.html">Profil</a>
+                <a href="services.html">Services</a>
+                <a href="expertise.html">Expertises</a>
+                <a href="projects.html">Projets</a>
+                <a href="experience.html">Parcours</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cta" href="contact.html">Demander un echange</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="accueil" class="hero">
-        <div class="container">
-            <h1>Ingénieur en Mécatronique et Robotique</h1>
-            <p>Spécialiste des systèmes automatisés et des nouvelles technologies IA</p>
-            <p>Conception, développement et optimisation de solutions robotiques intelligentes pour l'industrie 4.0</p>
-            <div class="hero-btns">
-                <a href="#projets" class="btn">Découvrir mes projets</a>
-                <a href="#contact" class="btn btn-outline">Me contacter</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-text">
-                        <h2>À Propos de Moi</h2>
-                        <p>Je suis Savin N'GUESSAN, ingénieur passionné par la mécatronique, la robotique et l'intelligence artificielle. Fort de plusieurs années d'expérience, je conçois et développe des systèmes automatisés innovants qui combinent mécanique de précision, électronique embarquée et informatique industrielle.</p>
-                        <p>Mon expertise s'étend de la conception de robots industriels à l'intégration d'algorithmes d'IA pour l'automatisation intelligente. Je suis constamment à l'affût des dernières avancées technologiques pour créer des solutions performantes, efficientes et adaptées aux défis de l'industrie moderne.</p>
-                        
-                        <h3>Domaines d'Expertise</h3>
-                        <div class="skills">
-                            <span class="skill-tag">Robotique Industrielle</span>
-                            <span class="skill-tag">Systèmes Embarqués</span>
-                            <span class="skill-tag">Vision par Ordinateur</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Contrôle Automatique</span>
-                            <span class="skill-tag">CAO/FAO (SolidWorks, CATIA)</span>
-                            <span class="skill-tag">Programmation C/C++</span>
-                            <span class="skill-tag">Python & Librairies Scientifiques</span>
-                            <span class="skill-tag">ROS (Robot Operating System)</span>
-                            <span class="skill-tag">IoT Industriel</span>
-                            <span class="skill-tag">Traitement du Signal</span>
-                            <span class="skill-tag">Automatismes Programmables (PLC)</span>
-                            <span class="skill-tag">Électronique de Puissance</span>
-                            <span class="skill-tag">Mécatronique Avancée</span>
-                        </div>
+    <main>
+        <section class="hero hero-home">
+            <div class="hero-overlay"></div>
+            <div class="shell hero-content">
+                <div class="hero-copy" data-reveal>
+                    <p class="eyebrow">Ingenieur mecatronique / robotique / automatisation / IA</p>
+                    <h1>Des systemes industriels mieux structures, mieux pilotes et mieux prepares pour la performance.</h1>
+                    <p class="hero-text">
+                        J'accompagne les industriels sur la conception de cellules robotisees,
+                        l'automatisation de process, l'integration de systemes embarques
+                        et l'usage concret de l'intelligence artificielle sur le terrain.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="projects.html">Voir les projets</a>
+                        <a class="button button-secondary" href="services.html">Explorer les services</a>
                     </div>
+                    <ul class="hero-points">
+                        <li>Robotique collaborative et industrielle</li>
+                        <li>Automatismes, supervision et instrumentation</li>
+                        <li>Vision machine, IA appliquee et maintenance predictive</li>
+                    </ul>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c6d3d7f3ad0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ingénieur en mécatronique travaillant sur un système automatisé" class="img-fluid rounded">
+
+                <div class="hero-aside" data-reveal>
+                    <div class="hero-stat">
+                        <span>Positionnement</span>
+                        <strong>Ingenierie terrain, integration systeme et vision operationnelle</strong>
+                    </div>
+                    <div class="hero-stat">
+                        <span>Interventions</span>
+                        <strong>Cadrage, conception, integration, optimisation et support</strong>
+                    </div>
+                    <div class="hero-stat">
+                        <span>Objectif</span>
+                        <strong>Faire gagner en disponibilite, qualite et maitrise des process</strong>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projets" class="projects">
-        <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                            <h3>Robotique Collaborative</h3>
-                        </div>
-                        <div class="project-content">
-                            <h3>Cobot Industriel Intelligent</h3>
-                            <p>Conception et développement d'un robot collaboratif équipé de capteurs de vision avancés et d'algorithmes d'IA pour l'assemblage automatisé en environnement mixte humain-robot. Le système intègre la détection de gestes et l'évitement d'obstacles dynamiques.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">ROS</span>
-                                <span class="project-tag">Vision IA</span>
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Capteurs LiDAR</span>
-                                <span class="project-tag">TensorFlow</span>
-                            </div>
-                            <a href="#" class="btn">Voir les détails</a>
-                        </div>
-                    </div>
+            <div class="shell hero-band" data-reveal>
+                <div>
+                    <strong>Cellules robotisees</strong>
+                    <span>Conception d'ensembles automatises pour production, assemblage et controle</span>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/images_7.jpg');">
-                            <h3>Cellule Robotisée</h3>
-                        </div>
-                        <div class="project-content">
-                            <h3>Cellule de Travail Robotisée avec Programmation Hors Ligne</h3>
-                            <p>Mise en place d'une cellule de travail robotisée complète avec système de programmation hors ligne. Conception de l'environnement de travail, intégration des systèmes de mesure et développement des séquences d'assemblage automatisées.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Robotique Industrielle</span>
-                                <span class="project-tag">Programmation Hors Ligne</span>
-                                <span class="project-tag">Automatisation</span>
-                                <span class="project-tag">Systèmes de Mesure</span>
-                            </div>
-                            <a href="#" class="btn">Voir les détails</a>
-                        </div>
-                    </div>
+                <div>
+                    <strong>Automatisation intelligente</strong>
+                    <span>Capteurs, PLC, supervision, analyse de donnees et optimisation continue</span>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <div class="project-img" style="background-image: url('images/images_3.jpg');">
-                            <h3>Maintenance Industrielle</h3>
-                        </div>
-                        <div class="project-content">
-                            <h3>Système de Maintenance Industrielle Avancée</h3>
-                            <p>Développement et mise en œuvre de protocoles de maintenance industrielle préventive et prédictive. Intégration de capteurs IoT pour la surveillance en temps réel des équipements et optimisation des cycles de maintenance.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Maintenance Industrielle</span>
-                                <span class="project-tag">IoT</span>
-                                <span class="project-tag">Analyse Prédictive</span>
-                                <span class="project-tag">GMAO</span>
-                            </div>
-                            <a href="#" class="btn">Voir les détails</a>
-                        </div>
-                    </div>
+                <div>
+                    <strong>Livrables clairs</strong>
+                    <span>Documentation technique, structuration des interfaces et logique projet lisible</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Mon Parcours</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2023 - Présent</span>
-                        <h3>Ingénieur en Mécatronique et Robotique</h3>
-                        <h4>Innovate Robotics Solutions</h4>
-                        <p>Direction d'une équipe de développement de robots industriels avancés intégrant l'IA pour l'automatisation intelligente. Conception d'architectures système et développement d'algorithmes de contrôle. Mise en place d'une cellule robotisée pour l'assemblage automobile. Programmation de bras robotisés et intégration de vision industrielle. Rédaction de documentation technique et formation des équipes de production.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2018 - 2023</span>
-                        <h3>Ingénieur en Génie Pétrolier et Gazier</h3>
-                        <h4>AutoTech Systems</h4>
-                        <p>Optimisation des procédés de raffinage et analyse des installations industrielles. Maintenance préventive et corrective d'équipements pétroliers. Analyse de performance et respect des normes HSE (Hygiène, Sécurité, Environnement). Participation à des projets d'automatisation des processus de production et mise en œuvre de solutions technologiques pour améliorer l'efficacité opérationnelle.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2015 - 2018</span>
-                        <h3>Master en Sciences de la Terre et des Ressources Minières</h3>
-                        <h4>Université Félix Houphouët-Boigny de Cocody</h4>
-                        <p>Spécialisation en géologie pétrolière et ressources énergétiques. Recherche en pétrologie et caractérisation des réservoirs. Formation approfondie en géophysique, géochimie et modélisation des systèmes géologiques. Participation à des projets de recherche sur l'exploration des ressources naturelles et leur exploitation durable.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">2014</span>
-                        <h3>Baccalauréat Scientifique Série D</h3>
-                        <h4>Lycée Municipal 2 de Koumassi</h4>
-                        <p>Formation scientifique complète avec spécialisation en sciences de la vie et de la terre, physique-chimie et mathématiques. Obtention du diplôme avec mention, démontrant un fort intérêt et des aptitudes pour les sciences et technologies.</p>
-                    </div>
+        <section class="section">
+            <div class="shell">
+                <div class="trust-strip">
+                    <article class="trust-item" data-reveal>
+                        <strong>Architecture systeme</strong>
+                        <span>Lecture transversale entre mecanique, controle, donnees et exploitation.</span>
+                    </article>
+                    <article class="trust-item" data-reveal>
+                        <strong>Approche industrielle</strong>
+                        <span>Des solutions pensees pour la fiabilite, la maintenance et le passage en production.</span>
+                    </article>
+                    <article class="trust-item" data-reveal>
+                        <strong>Execution propre</strong>
+                        <span>Une presentation claire des missions, des resultats attendus et des contraintes.</span>
+                    </article>
+                    <article class="trust-item" data-reveal>
+                        <strong>Navigation utile</strong>
+                        <span>Des sous-pages dediees pour aller rapidement du profil aux cas concrets.</span>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <h2>Certifications & Formations</h2>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="certification-card">
-                        <div class="certification-img" style="background-image: url('images/images_10.jpg');">
-                        </div>
-                        <div class="certification-content">
-                            <h3>MOOC Robotique Avancée</h3>
-                            <p>Certification en robotique avancée couvrant la programmation de robots industriels, la vision par ordinateur et l'intégration de systèmes automatisés. Formation complète sur les dernières technologies en robotique collaborative.</p>
-                        </div>
-                    </div>
+        <section class="section section-alt">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow eyebrow-dark">Ce que le site raconte</p>
+                    <h2>Un portfolio plus professionnel doit montrer une proposition de valeur, pas seulement une liste de competences.</h2>
+                    <p>
+                        L'accueil pose le cap, les pages internes approfondissent chaque sujet
+                        et les fiches projet permettent de naviguer entre les missions comme sur un vrai site vitrine.
+                    </p>
                 </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="certification-card">
-                        <div class="certification-img" style="background-image: url('images/images_1.jpg');">
-                        </div>
-                        <div class="certification-content">
-                            <h3>Formation Publique en Automatisme Industriel</h3>
-                            <p>Certification en automatismes industriels et contrôle de processus. Formation couvrant la programmation de PLC, les systèmes SCADA et l'intégration de capteurs dans les environnements industriels.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="certification-card">
-                        <div class="certification-img" style="background-image: url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
-                        </div>
-                        <div class="certification-content">
-                            <h3>Intelligence Artificielle Industrielle</h3>
-                            <p>Certification spécialisée en applications de l'IA dans l'industrie. Formation sur le machine learning, la vision par ordinateur et l'optimisation des processus industriels grâce aux algorithmes intelligents.</p>
-                        </div>
-                    </div>
+
+                <div class="metric-grid">
+                    <article class="metric-card" data-reveal>
+                        <strong>6</strong>
+                        <span>Pages principales avec un role clair dans la lecture du profil</span>
+                    </article>
+                    <article class="metric-card" data-reveal>
+                        <strong>4</strong>
+                        <span>Fiches projet detaillees pour donner de la profondeur aux cas concrets</span>
+                    </article>
+                    <article class="metric-card" data-reveal>
+                        <strong>1</strong>
+                        <span>Direction visuelle coherente, sobre et plus credible pour un recruteur ou un client</span>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-moi</h2>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div>
-                                <h3>Email</h3>
-                                <p>nguessansavin@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <div>
-                                <h3>Téléphone</h3>
-                                <p>+225 07 08 50 67 64</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h3>Localisation</h3>
-                                <p>Abidjan, Côte d'Ivoire</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">💼</div>
-                            <div>
-                                <h3>LinkedIn</h3>
-                                <p>linkedin.com/in/savin-n-nguessan</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">🔗</div>
-                            <div>
-                                <h3>GitHub</h3>
-                                <p>github.com/savin-nguessan</p>
-                            </div>
-                        </div>
-                    </div>
+        <section class="section">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow eyebrow-dark">Sous-pages</p>
+                    <h2>Chaque page a maintenant une fonction claire dans le parcours de visite.</h2>
                 </div>
-                
-                <div class="col-lg-6">
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group mb-3">
-                                <label for="name" class="form-label">Nom complet</label>
-                                <input type="text" id="name" class="form-control" required>
-                            </div>
-                            
-                            <div class="form-group mb-3">
-                                <label for="email" class="form-label">Adresse email</label>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                            
-                            <div class="form-group mb-3">
-                                <label for="subject" class="form-label">Sujet du message</label>
-                                <input type="text" id="subject" class="form-control" required>
-                            </div>
-                            
-                            <div class="form-group mb-3">
-                                <label for="message" class="form-label">Votre message</label>
-                                <textarea id="message" class="form-control" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn">Envoyer le message</button>
-                        </form>
-                    </div>
+
+                <div class="service-link-grid">
+                    <article class="service-link-card" data-reveal>
+                        <div>
+                            <p class="tag-row">Profil</p>
+                            <h3>Positionnement et socle technique</h3>
+                            <p>Presentation du profil, outils frequents et maniere d'aborder les environnements industriels.</p>
+                        </div>
+                        <a class="button button-primary" href="about.html">Ouvrir la page Profil</a>
+                    </article>
+                    <article class="service-link-card" data-reveal>
+                        <div>
+                            <p class="tag-row">Services</p>
+                            <h3>Offres, accompagnement et livrables</h3>
+                            <p>Une page dediee pour expliciter ce qui peut etre realise dans un cadre de mission ou de collaboration.</p>
+                        </div>
+                        <a class="button button-primary" href="services.html">Voir les services</a>
+                    </article>
+                    <article class="service-link-card" data-reveal>
+                        <div>
+                            <p class="tag-row">Projets</p>
+                            <h3>Cas d'usage et navigation detaillee</h3>
+                            <p>Des projets presentes comme de vraies interventions, avec liens vers des pages internes plus completes.</p>
+                        </div>
+                        <a class="button button-primary" href="projects.html">Explorer les projets</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow eyebrow-dark">Projets en avant</p>
+                    <h2>Des sujets qui parlent tout de suite a un recruteur, un client ou un partenaire industriel.</h2>
+                </div>
+
+                <div class="project-preview-grid">
+                    <article class="project-preview" data-reveal>
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80" alt="Robot collaboratif en environnement industriel">
+                        <div class="project-preview-body">
+                            <p class="tag-row">ROS / Vision IA / Securite machine</p>
+                            <h3>Cobot intelligent pour poste d'assemblage</h3>
+                            <p>
+                                Coordination homme-machine, vision embarquee et evitement d'obstacles
+                                pour un environnement de production mixte.
+                            </p>
+                            <a class="button button-primary" href="project-cobot.html">Voir la fiche projet</a>
+                        </div>
+                    </article>
+
+                    <article class="project-preview" data-reveal>
+                        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=80" alt="Cellule automatisee avec bras robotise">
+                        <div class="project-preview-body">
+                            <p class="tag-row">Programmation hors ligne / PLC / Integration</p>
+                            <h3>Cellule robotisee pour ligne d'assemblage</h3>
+                            <p>
+                                Conception du flux, sequences automatisees et validation
+                                de l'environnement de travail avant mise en service.
+                            </p>
+                            <a class="button button-primary" href="project-cellule.html">Voir la fiche projet</a>
+                        </div>
+                    </article>
+
+                    <article class="project-preview" data-reveal>
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" alt="Analyse industrielle et maintenance predictive">
+                        <div class="project-preview-body">
+                            <p class="tag-row">IoT / Donnees terrain / Maintenance predictive</p>
+                            <h3>Surveillance d'equipements et maintenance avancee</h3>
+                            <p>
+                                Collecte de donnees, suivi d'etat et anticipation des arrets
+                                afin de mieux maitriser la disponibilite machine.
+                            </p>
+                            <a class="button button-primary" href="project-maintenance.html">Voir la fiche projet</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-cta" data-reveal>
+                    <a class="button button-primary" href="projects.html">Explorer tous les projets</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="shell">
+                <div class="section-heading" data-reveal>
+                    <p class="eyebrow eyebrow-dark">Parcours de visite</p>
+                    <h2>Une circulation plus naturelle de page en page.</h2>
+                </div>
+
+                <div class="insight-grid">
+                    <article class="insight-card" data-reveal>
+                        <h3>1. Comprendre le profil</h3>
+                        <p>La page Profil construit la confiance et pose le cadre technique du portfolio.</p>
+                    </article>
+                    <article class="insight-card" data-reveal>
+                        <h3>2. Evaluer l'offre</h3>
+                        <p>La page Services reformule les competences comme des accompagnements concrets.</p>
+                    </article>
+                    <article class="insight-card" data-reveal>
+                        <h3>3. Verifier sur cas reels</h3>
+                        <p>Les pages projet donnent de la matiere et transforment la visite en lecture professionnelle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cta-panel">
+            <div class="shell cta-panel" data-reveal>
+                <div>
+                    <p class="eyebrow eyebrow-dark">Disponible pour collaboration</p>
+                    <h2>Vous avez besoin d'un profil capable de parler mecanique, automatisme, integration et IA dans la meme conversation.</h2>
+                </div>
+                <a class="button button-primary" href="contact.html">Ouvrir la page contact</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <div>
+                <a class="brand brand-footer" href="index.html">
+                    <span class="brand-mark">SN</span>
+                    <span class="brand-text">Savin <strong>N'Guessan</strong></span>
+                </a>
+                <p class="footer-copy">
+                    Ingenieur en mecatronique, robotique et automatisation industrielle.
+                    Portfolio multi-pages concu pour presenter une expertise claire,
+                    moderne et credible.
+                </p>
+            </div>
+
+            <div>
+                <h3>Navigation</h3>
+                <div class="footer-links">
+                    <a href="about.html">Profil</a>
+                    <a href="services.html">Services</a>
+                    <a href="expertise.html">Expertises</a>
+                    <a href="projects.html">Projets</a>
+                    <a href="experience.html">Parcours</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <div class="footer-links">
+                    <a href="mailto:nguessansavin@gmail.com">nguessansavin@gmail.com</a>
+                    <a href="tel:+2250708506764">+225 07 08 50 67 64</a>
+                    <a href="https://linkedin.com/in/savin-n-nguessan" target="_blank" rel="noreferrer">LinkedIn</a>
+                    <a href="https://github.com/savin-nguessan" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-about">
-                        <div class="footer-logo">Savin<span>N'GUESSAN</span></div>
-                        <p>Ingénieur en mécatronique et robotique spécialisé dans les systèmes automatisés et l'intelligence artificielle. Conception de solutions innovantes pour l'industrie 4.0.</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link">in</a>
-                            <a href="#" class="social-link">Git</a>
-                            <a href="#" class="social-link">Tw</a>
-                            <a href="#" class="social-link">Yt</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-links">
-                        <h3>Navigation</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#accueil">Accueil</a></li>
-                            <li><a href="#apropos">À Propos</a></li>
-                            <li><a href="#projets">Projets</a></li>
-                            <li><a href="#experience">Expérience</a></li>
-                            <li><a href="#certifications">Certifications</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-links">
-                        <h3>Expertises</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Robotique Industrielle</a></li>
-                            <li><a href="#">Systèmes Automatisés</a></li>
-                            <li><a href="#">Intelligence Artificielle</a></li>
-                            <li><a href="#">Vision par Ordinateur</a></li>
-                            <li><a href="#">IoT Industriel</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-links">
-                        <h3>Services</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Conception Robotique</a></li>
-                            <li><a href="#">Automatisation Industrielle</a></li>
-                            <li><a href="#">Développement IA</a></li>
-                            <li><a href="#">Consultation Technique</a></li>
-                            <li><a href="#">Formation Spécialisée</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 Savin N'GUESSAN - Ingénieur Mécatronique & Robotique. Tous droits réservés.</p>
-            </div>
+        <div class="shell footer-bottom">
+            <p>&copy; 2026 Savin N'Guessan. Tous droits reserves.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
